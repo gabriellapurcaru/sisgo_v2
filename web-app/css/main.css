@@ -1,0 +1,419 @@
+html * {
+    margin: 0;
+    /*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
+}
+
+/* GENERAL */
+
+img{border:0px;}
+body {
+    background: #fff;
+    color: #333;
+    font: 11px verdana, arial, helvetica, sans-serif;
+    margin:0;
+}
+
+#bdy{margin:0 auto;width:85%;}
+
+#topo {background: url("../images/imgs/bdy-menu.png") repeat-x scroll 0 0 transparent;color: #FFFFFF;float: left;width: 100%;}
+
+#meio{float: left;width: 100%;border: 1px dotted #DDDDDD;min-height: 500px;}
+#content{float:left;padding: 10px 20px;width: 900px;}
+
+.nav {
+    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+    border-bottom: 1px dotted #ccc;
+    width:100%;
+    float:left;
+    margin: 0 auto;
+    padding:10px 0px 10px 0px;
+}
+
+.botao{
+    float: left;
+    height: 20px;
+    margin: 20px 10px 20px 0;
+    padding: 20px;
+    text-align: center;
+    width: 90px;
+}
+
+a:visited, a:link {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+h1 {
+    color: #AA4B37;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+h2{
+    color: #FFFFFF;
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    width: 50%;
+    padding: 10px 20px;
+}
+
+h3{
+    color: #AA4B37;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+p.auth {
+    float: right;
+    margin: 0;
+    width: 40%;
+    padding:10px 20px 10px 0px;
+    text-align: right;
+    color:#fff;
+}
+a.link{color:#fff;}
+
+ul {
+    padding-left: 15px;
+}
+
+select, textarea {
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    font: 11px verdana, arial, helvetica, sans-serif;
+    margin: 2px 0;
+    padding: 2px 4px;
+}
+.fc1{
+  width:560px;
+  float:left;
+  
+}
+.fc2{
+    width: 600px;
+  float: left;
+}
+
+p.fc2{
+  width: 300px;
+  float: left;
+}
+input.fc1 {
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    font: 11px verdana, arial, helvetica, sans-serif;
+    margin: 2px 0;
+    padding: 8px;
+    width: 550px;
+}
+
+input.fc2 {
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    font: 11px verdana, arial, helvetica, sans-serif;
+    margin: 2px 0;
+    padding: 8px;
+    width: 250px;
+}
+
+input {
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    font: 11px verdana, arial, helvetica, sans-serif;
+    margin: 2px 0;
+    padding: 2px 4px;
+}
+
+
+select {
+    padding: 8px;
+}
+
+select.select {
+    padding: 8px;
+    width: 268px;
+}
+
+select.selectl {
+    padding: 8px;
+    width:100%;
+}
+
+textarea {
+	width: 250px;
+	height: 150px;
+	vertical-align: top;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: 1px solid #b2d1ff;
+}
+
+.form {
+    float: left;
+    margin: 0 15px 10px 15px;
+    width:60%;
+}
+
+label{float: left;width: 100%;margin:5px 0px;}
+
+
+label.anm{
+    float: left;
+    font-size: 12px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    width: 100%;
+
+}
+/* NAVIGATION MENU */
+
+.menuButton {
+    font-size: 10px;
+    padding: 0 5px;
+}
+.menuButton a {
+    color: #333;
+    padding: 4px 6px;
+}
+.menuButton a.home {
+    background: url(../images/skin/house.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.list {
+    background: url(../images/skin/database_table.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.create {
+    background: url(../images/skin/database_add.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+
+/* MESSAGES AND ERRORS */
+
+.message {
+    background: #f3f8fc url(../images/skin/information.png) 8px 50% no-repeat;
+    border: 1px solid #b2d1ff;
+    color: #006dba;
+    margin: 10px 0 5px 0;
+    padding: 20px 30px;
+}
+
+div.errors {
+    background: #fff3f3;
+    border: 1px solid red;
+    color: #cc0000;
+    margin: 10px 0 5px 0;
+    padding: 5px 0 5px 0;
+}
+div.errors ul {
+    list-style: none;
+    padding: 0;
+}
+div.errors li {
+	background: url(../images/skin/exclamation.png) 8px 0% no-repeat;
+    line-height: 16px;
+    padding-left: 30px;
+}
+
+td.errors select {
+    border: 1px solid red;
+}
+td.errors input {
+    border: 1px solid red;
+}
+td.errors textarea {
+    border: 1px solid red;
+}
+
+/* TABLES */
+
+table {
+    border: 1px solid #ccc; float: left;
+                                width: 100%;
+}
+tr {
+  border: 1px solid #DDDDDD;
+}
+td, th {
+    font: 11px verdana, arial, helvetica, sans-serif;
+    line-height: 12px;
+    padding: 5px 6px;
+    text-align: left;
+    vertical-align: top;
+}
+th {
+    background: #fff url(../images/skin/shadow.jpg);
+    color: #666;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 2px 6px;
+}
+th a:link, th a:visited, th a:hover {
+    color: #333;
+    display: block;
+    font-size: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+th.asc a, th.desc a {
+    background-position: right;
+    background-repeat: no-repeat;
+}
+th.asc a {
+    background-image: url(../images/skin/sorted_asc.gif);
+}
+th.desc a {
+    background-image: url(../images/skin/sorted_desc.gif);
+}
+
+.odd {
+    background: #f7f7f7;
+}
+.even {
+    background: #fff;
+}
+
+/* LIST */
+
+.list table {
+    border-collapse: collapse;
+}
+.list th, .list td {
+    border-left: 1px solid #ddd;
+}
+.list th:hover, .list tr:hover {
+    background: #b2d1ff;
+}
+
+/* PAGINATION */
+
+.paginateButtons {
+    border-top: 0;
+    color: #666;
+    font-size: 10px;
+    overflow: hidden;
+    padding: 10px 3px;
+}
+.paginateButtons a {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #ccc #aaa #aaa #ccc;
+    color: #666;
+    margin: 0 3px;
+    padding: 2px 6px;
+}
+.paginateButtons span {
+    padding: 2px 3px;
+}
+
+/* DIALOG */
+
+.dialog table {
+    padding: 5px 0;
+}
+
+.prop {
+    padding: 5px;
+}
+.prop .name {
+    text-align: left;
+    width: 15%;
+    white-space: nowrap;
+}
+.prop .value {
+    text-align: left;
+    width: 85%;
+}
+
+/* ACTION BUTTONS */
+
+.buttons {
+    color: #666;
+    font-size: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 0;
+    width:100%;
+    float:left;
+}
+
+.span {
+    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 10px;
+    margin: 0px 5px 5px 5px;
+    overflow: hidden;
+    padding: 0;
+    width: 100px;
+    float:left;
+}
+
+.span2 {
+    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 10px;
+    margin: 0px 5px 5px 5px;
+    overflow: hidden;
+    padding: 5px;
+    width: 120px;
+    float:left;
+}
+
+.buttons input {
+     background: -moz-linear-gradient(center top , #E6E6E6, #FFFFFF) repeat scroll 0 0 transparent;
+     border: 1px solid #CCCCCC;
+     border-radius: 3px 3px 3px 3px;
+     box-shadow: 1px 1px 0 #EFEFEF;
+     outline: medium none;
+     padding: 3px;
+     text-shadow: 0 1px 0 #FFFFFF;
+}
+.buttons input.delete {
+    background: transparent url(../images/skin/database_delete.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.edit {
+    background: transparent url(../images/skin/database_edit.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.save {
+    background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.sets{width:30%;float:left;}
+.sets2{width:50%;float:left;}
+.set{width:100%;float:left;margin: 0 0 5px;}
+
+.ps3{   
+    float: left;
+    width: 100%;
+}
+
+.ps1{
+  float:left;
+  width:100%;
+  margin: 5px 0;
+}
+
+input.d{width: 440px;}
+
+#login-acesso{float: left;width: 700px;}
+    
