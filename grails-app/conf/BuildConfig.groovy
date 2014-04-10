@@ -19,7 +19,7 @@ grails.project.dependency.resolution = {
         mavenLocal()
         mavenCentral()
         mavenRepo "http://snapshots.repository.codehaus.org"
-        //mavenRepo "http://repository.codehaus.org"
+        mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
     }
@@ -33,7 +33,7 @@ grails.project.dependency.resolution = {
         compile ":quartz:0.4.2"
         compile ":mail:1.0.1"
         compile ":spring-security-core:1.2.7.3"
-        //compile ":multi-tenant-core:1.0.3"
+        compile ":multi-tenant-core:1.0.3"
         compile ":multi-tenant-spring-security:0.2.1"
     }
 

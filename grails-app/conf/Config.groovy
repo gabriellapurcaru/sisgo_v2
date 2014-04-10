@@ -120,10 +120,6 @@ tomcat.deploy.username="gabriella"
 tomcat.deploy.password=""
 tomcat.deploy.url="http://tutanodigital.com.br:8080/manager"
 
-// Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'sisgo.auth.User'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'sisgo.auth.UserRole'
-grails.plugins.springsecurity.authority.className = 'sisgo.auth.Role'
 
 tenant {
     resolver.type = "springSecurity"
@@ -138,3 +134,16 @@ tenant {
      **/
     resolver.request.dns.type = "db"
 }
+
+import grails.plugins.springsecurity.SecurityConfigType
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'sisgo.auth.SecUser'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'sisgo.auth.SecUserSecRole'
+grails.plugins.springsecurity.authority.className = 'sisgo.auth.SecRole'
+
+grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
+grails.plugins.springsecurity.interceptUrlMap = [
+        '/clinica/**':       ['ROLE_USER'],
+        '/paciente/**':       ['ROLE_USER']
+
+]

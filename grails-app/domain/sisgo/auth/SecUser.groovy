@@ -1,11 +1,13 @@
 package sisgo.auth
 
-class User {
+class SecUser {
 
     transient springSecurityService
 
     Integer userTenantId
 
+    String primeiroNome
+    String ultimoNome
     String username
     String email
     String email2
@@ -17,6 +19,9 @@ class User {
     boolean passwordExpired
 
     static constraints = {
+        userTenantId(min: 0)
+        primeiroNome(blank: true, maxSize: 50)
+        ultimoNome(blank: true, maxSize: 100)
         username blank: false, unique: true //, matches:"[a-zA-Z1-9]+"
         password(blank: false, nullable: false, minsize: 6, validator: {password, obj ->
             def password2 = obj.properties['password2']
@@ -32,12 +37,12 @@ class User {
     }
 
     static mapping = {
-        id name: 'id', generator: 'sequence', params: [sequence:'user_id_seq']
+        id name: 'id', generator: 'sequence', params: [sequence:'sec_user_id_seq']
         password column: '`password`'
     }
 
-    Set<Role> getAuthorities() {
-        UserRole.findAllByUser(this).collect { it.role } as Set
+    Set<SecRole> getAuthorities() {
+        SecUserSecRole.findAllBySecUser(this).collect { it.secRole } as Set
     }
 
     def beforeInsert() {
@@ -58,3 +63,5 @@ class User {
 
     static transients = ['password2', 'email2']
 }
+
+

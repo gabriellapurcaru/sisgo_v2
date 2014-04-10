@@ -4,6 +4,7 @@ class PacienteController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+    /*
     def beforeInterceptor = [action:this.&checkAuthorization,except:['login', 'autenticar', 'save', 'logout']]
     def checkAuthorization(){
   	    def usuarioAutenticado = session.usuarioAutenticado
@@ -14,6 +15,7 @@ class PacienteController {
   	    	redirect(controller:'usuario',action:'login')
   	    	}
   	}
+  	*/
 
     def index = {
         redirect(action: "list", params: params)

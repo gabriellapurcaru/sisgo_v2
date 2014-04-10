@@ -1,6 +1,6 @@
 package sisgo.auth
 
-class Role {
+class SecRole {
 
 	String authority
 

@@ -1,9 +1,13 @@
-package sisgo;
+package sisgo
 
+import grails.plugin.multitenant.core.groovy.compiler.MultiTenant
+
+@MultiTenant
 class Paciente {
 
      static hasMany = [anamnese : Anamnese, consultas:Consulta, agenda:Agenda]
 
+    //Clinica clinica
     int id
     String nome
     String rg
